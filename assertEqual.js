@@ -4,4 +4,6 @@ const assertEqual = function (expression, expected) {
   }
   return console.log(`❌❌❌ Assertion Failed: ${expression} !== ${expected}`);
 };
+
+
 console.log(assertEqual("Jafmes", "James"));
