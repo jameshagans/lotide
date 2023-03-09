@@ -1,5 +1,11 @@
-let assertArraysEqual = function (a, b) {
-  return eqArrays(a, b);
+const assertArraysEqual = function (a, b) {
+
+  if (!eqArrays(a, b)) {
+    console.log(`❌❌❌ Assertion Failed : ${a} !== ${b}`);
+    return false;
+  }
+  console.log(`🟢🟢🟢 Assertion Passed : ${a} === ${b}`);
+  return true;
 }
 
 
@@ -7,18 +13,25 @@ let assertArraysEqual = function (a, b) {
 function eqArrays(arr1, arr2) {
   // check the length of arrays as if they're not the same they can't be equal 
   if (arr1.length != arr2.length) {
-    return `❌❌❌ Assertion Failed: The arrays have a different length`;
+    return false;
   } else {
 
     // comparing each element of array 
     for (let i = 0; i < arr1.length; i++) {
 
       if (arr1[i] !== arr2[i]) {
-        return `❌❌❌ Assertion Failed: The arrays do not match!`;
+        return false;
       }
     }
-    return `🟢🟢🟢 Assertion Passed: The arrays are a match! `;
+    return true;
   }
 }
 
-console.log(assertArraysEqual([1, 2, 5], [1, 2, 3]));
+assertArraysEqual([1, 2, 5], [1, 2, 3]);
+
+
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // output expected: pass
+assertArraysEqual([1, 2, 3, 4], [1, 2, 3, 4]); // output expected: pass 
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // output expected: fail 
+assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // output expected: fail 
