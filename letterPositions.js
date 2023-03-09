@@ -14,7 +14,6 @@ const letterPositions = function (sentence) {
     }
     count++
   }
-  console.log(results);
   return results;
 
 };
