@@ -5,7 +5,6 @@ const middle = (arr) => {
     resultArray.push(arr[Math.floor((arr.length - 1) / 2)]);
     return resultArray;
   } else {
-    console.log(arr);
     resultArray.push(arr[Math.floor((arr.length - 1) / 2)]);
     resultArray.push(arr[Math.floor((arr.length - 1) / 2) + 1]);
   }
