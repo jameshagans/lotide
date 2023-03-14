@@ -72,3 +72,4 @@ console.log(assertArraysEqual(letterPositions("hello").e, [1]));
 //   return results;
 
 // };
+module.exports = letterPositions;

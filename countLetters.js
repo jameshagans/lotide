@@ -1,11 +1,4 @@
-const assertEqual = function (expression, expected) {
-  if (expression === expected) {
-    return console.log(`🟢🟢🟢 Assertion Passed: ${expression} === ${expected}`);
-  }
-  return console.log(`❌❌❌ Assertion Failed: ${expression} !== ${expected}`);
-};
-
-const countOnly = function (sentence) {
+const countLetters = function (sentence) {
   const results = {};
 
   for (const letter of sentence) {
@@ -18,7 +11,4 @@ const countOnly = function (sentence) {
   return results;
 };
 
-const test = countOnly("LHL");
-
-
-assertEqual(test["L"], 2); 
+module.exports = countLetters; 

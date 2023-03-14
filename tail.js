@@ -3,5 +3,5 @@ let tail = function (arr) {
   console.log(newArray)
   return newArray;
 };
-tail(["Hello", "Lighthouse", "Labs"])
+
 module.exports = tail; 

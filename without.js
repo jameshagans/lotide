@@ -1,25 +1,25 @@
-let assertArraysEqual = function (a, b) {
-  return eqArrays(a, b);
-}
+// let assertArraysEqual = function (a, b) {
+//   return eqArrays(a, b);
+// }
 
 
-function eqArrays(arr1, arr2) {
-  // check the length of arrays as if they're not the same they can't be equal 
-  if (arr1.length !== arr2.length) {
-    return console.log(`❌❌❌ Assertion Failed: The arrays have a different length`);
-  } else {
+// function eqArrays(arr1, arr2) {
+//   // check the length of arrays as if they're not the same they can't be equal 
+//   if (arr1.length !== arr2.length) {
+//     return console.log(`❌❌❌ Assertion Failed: The arrays have a different length`);
+//   } else {
 
-    // comparing each element of array 
-    for (let i = 0; i < arr1.length; i++) {
+//     // comparing each element of array 
+//     for (let i = 0; i < arr1.length; i++) {
 
-      if (arr1[i] !== arr2[i]) {
-        return console.log(`❌❌❌ Assertion Failed: The arrays do not match!`);
-      }
-    }
+//       if (arr1[i] !== arr2[i]) {
+//         return console.log(`❌❌❌ Assertion Failed: The arrays do not match!`);
+//       }
+//     }
 
-  }
-  return console.log(`🟢🟢🟢 Assertion Passed: The arrays are a match! `);
-}
+//   }
+//   return console.log(`🟢🟢🟢 Assertion Passed: The arrays are a match! `);
+// }
 
 
 const without = function (source, itemsToRemove) {
@@ -36,11 +36,12 @@ const without = function (source, itemsToRemove) {
 // without([1, 2, 3], [1]) // => [2, 3]
 // without(["1", "2", "3"], [1, 2, "3"])
 
-const words = ["hello", "world", "lighthouse"];
-// without(words, ["lighthouse"]);
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+// const words = ["hello", "world", "lighthouse"];
+// // without(words, ["lighthouse"]);
+// assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
-assertArraysEqual(without([1, 2, 3], [3]), [1, 2]);
+// assertArraysEqual(without([1, 2, 3], [3]), [1, 2]);
 
+module.exports = without; 
 
 
