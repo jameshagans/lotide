@@ -10,13 +10,13 @@ const takeUntil = require('./takeUntil')
 const without = require('./without')
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  countOnly: countOnly,
-  countLetters: countLetters,
-  findKey: findKey,
-  letterPositions: letterPositions,
-  takeUntil: takeUntil,
-  without: without
+  head,
+  tail,
+  middle, 
+  countOnly,
+  countLetters,
+  findKey,
+  letterPositions,
+  takeUntil,
+  without
 };
